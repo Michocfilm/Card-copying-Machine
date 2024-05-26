@@ -4,7 +4,7 @@
 <a href = "https://github.com/Michocfilm/Adafruit_SH1106"><kbd>🟢 Adafruit_SH1106</kbd></a><br>
 
 # 🕯️What is Card copying machine
-Card copying machine is a machine to copy NFC cards, MIFARE cards, and others card to make backup cards.
+The card copying machine is a machine for copying NFC cards, MIFARE cards, and other cards to create backup cards with the status displayed on an OLED screen. This machine is a project from ARDUINO.
 
 # 🕯️What is MFRC-522
 The MFRC-522 is a highly **integrated reader/writer** IC for contactless communication at 13.56 MHz. It is commonly used in RFID (Radio Frequency Identification) systems and NFC (Near Field Communication) applications. Here are some key features and uses of the MFRC-522:
