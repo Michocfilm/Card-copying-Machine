@@ -85,7 +85,7 @@ void loop() {
     display.setCursor(0, 45);
     display.print(F("-successfully"));
     display.display();
-    delay(1000);
+    delay(1500);
     display.clearDisplay();
     display.display();
   } else {
@@ -95,7 +95,7 @@ void loop() {
     display.setCursor(0, 45);
     display.print(F("-Error"));
     display.display();
-    delay(1000);
+    delay(1500);
     display.clearDisplay();
     display.display();
   }
@@ -103,6 +103,4 @@ void loop() {
   mfrc522.PICC_HaltA();
   mfrc522.PCD_StopCrypto1();
   
-  delay(5000);
 }
-//B9 B2 14 3E
