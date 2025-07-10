@@ -33,6 +33,11 @@ void setup() {
 void loop() {
   
   byte newUid[4];
+  display.setTextSize(1);
+  display.setTextColor(1); 
+  display.setCursor(0, 0);
+  display.print(F("Ready to new UID "));
+  display.display();
   // ตรวจสอบว่ามีบัตรใกล้เคียงกับ MFRC522 หรือไม่
   if (!mfrc522.PICC_IsNewCardPresent()) {
     return;
@@ -42,11 +47,7 @@ void loop() {
   if (!mfrc522.PICC_ReadCardSerial()) {
     return;
   }
-  display.setTextSize(1);
-  display.setTextColor(1); 
-  display.setCursor(0, 0);
-  display.print(F("Ready to new UID "));
-  display.display();
+
   // แสดง UID ของบัตร
   Serial.print("Card UID: ");
   for (byte i = 0; i < mfrc522.uid.size; i++) {
@@ -65,7 +66,7 @@ void loop() {
   for (byte i = 0; i < mfrc522.uid.size; i++) {
     newUid[i] = mfrc522.uid.uidByte[i];
   }
-  
+  delay(1000);
   Serial.println("Waiting for a new card...");
   display.setTextSize(1);
   display.setTextColor(1); 
@@ -86,6 +87,7 @@ void loop() {
     display.display();
     delay(1000);
     display.clearDisplay();
+    display.display();
   } else {
     Serial.println("Error writing new UID to the card");
     display.setTextSize(1);
@@ -95,6 +97,7 @@ void loop() {
     display.display();
     delay(1000);
     display.clearDisplay();
+    display.display();
   }
 
   mfrc522.PICC_HaltA();
