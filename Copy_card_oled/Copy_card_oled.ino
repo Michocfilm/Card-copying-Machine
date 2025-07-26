@@ -66,7 +66,7 @@ void loop() {
   for (byte i = 0; i < mfrc522.uid.size; i++) {
     newUid[i] = mfrc522.uid.uidByte[i];
   }
-  delay(1000);
+  delay(1500);
   Serial.println("Waiting for a new card...");
   display.setTextSize(1);
   display.setTextColor(1); 
