@@ -85,7 +85,7 @@ void loop() {
     display.setCursor(0, 45);
     display.print(F("-successfully"));
     display.display();
-    delay(1500);
+    delay(2000);
     display.clearDisplay();
     display.display();
   } else {
@@ -95,7 +95,7 @@ void loop() {
     display.setCursor(0, 45);
     display.print(F("-Error"));
     display.display();
-    delay(1500);
+    delay(2000);
     display.clearDisplay();
     display.display();
   }
